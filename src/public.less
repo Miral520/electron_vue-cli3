@@ -1,0 +1,76 @@
+// 重置样式
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+// 清除浮动
+.clearfix {
+    &::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+// 单行文字超出后省略
+.text-omitte {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// 垂直居中
+.middle-layout(@select) {
+    &::after {
+        content: "";
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    @{select} {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+// 已父元素为基础全屏显示
+.full-layout {
+    width: 100%;
+    height: 100%;
+}
+
+// 高度计算函数
+.calc-height(@format) {
+    height: -webkit-calc(@format);
+    height: -moz-calc(@format);
+    height: -ms-calc(@format);
+    height: -o-calc(@format);
+    height: calc(@format);
+}
+
+// 宽度计算函数
+.calc-width(@format) {
+    width: -webkit-calc(@format);
+    width: -moz-calc(@format);
+    width: -ms-calc(@format);
+    width: -o-calc(@format);
+    width: calc(@format);
+}
+
+// Element-UI 样式重置
+.el-row {
+    height: 100%;
+    .el-col {
+        height: 100%;
+    }
+}
+
+.el-scrollbar{
+    height: 100%;
+}
+
+.el-scrollbar__wrap{
+    overflow-x: hidden;
+}
