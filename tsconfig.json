@@ -12,13 +12,12 @@
     "sourceMap": true,
     "strictNullChecks": false,
     "baseUrl": ".",
-    "types": [
-      "webpack-env"
-    ],
+    "types": [],
     "paths": {
-      "@/*": [
-        "src/*"
-      ]
+      "@": ["src"],
+      "assets": ["src/assets"],
+      "components": ["src/components"],
+      "view": ["src/view"]
     },
     "lib": [
       "esnext",

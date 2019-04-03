@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { Message, Loading } from 'element-ui';
+import { Loading, Message } from 'element-ui';
 
 // axios.defaults.baseURL = 'http://'
 
@@ -39,5 +39,28 @@ export default {
                 type: 'error'
             });
          })
-     }
+     },
+     
+    // 全屏显示
+    // setFullDisplay() {
+    //     let usablePrefixMethod;
+    //     let element = document.body;
+    //     let method = 'RequestFullScreen';
+    //     ["webkit", "moz", "ms", "o", ""].forEach(function (prefix) {
+    //         if (usablePrefixMethod) return;
+    //         if (prefix === "") {
+    //             // 无前缀，方法首字母小写
+    //             method = method.slice(0, 1).toLowerCase() + method.slice(1);
+    //         }
+    //         let typePrefixMethod = typeof element[prefix + method];
+    //         if (typePrefixMethod + "" !== "undefined") {
+    //             if (typePrefixMethod === "function") {
+    //                 usablePrefixMethod = element[prefix + method]();
+    //             } else {
+    //                 usablePrefixMethod = element[prefix + method];
+    //             }
+    //         }
+    //     });
+    //     return usablePrefixMethod;
+    // },
 }

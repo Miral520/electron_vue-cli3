@@ -69,8 +69,8 @@
     function refreshRem(){
         var width = docEl.getBoundingClientRect().width;
         if (width / dpr > 540) {
-            // width = 540 * dpr;
-            width = width * dpr; // 更改方案，适配超过540px的大屏幕
+            width = 540 * dpr;
+            // width = width * dpr; // 更改方案，适配超过540px的大屏幕
         }
         var rem = width / 10;
         docEl.style.fontSize = rem + 'px';
